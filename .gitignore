@@ -1,3 +1,5 @@
-KIS/REST/env.py
+API/KIS/REST/env.py
 module/moduleDown.py
-__pycache__
+__pycache__/
+venv/
+LLM/model/
