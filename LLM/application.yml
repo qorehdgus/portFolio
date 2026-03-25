@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: LLM-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: LLM
+  template:
+    metadata:
+      labels:
+        app: LLM
+    spec:
+      containers:
+      - name: LLM
+        image: my-LLM:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80

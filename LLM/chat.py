@@ -11,13 +11,16 @@ import re
 import redis
 
 
-local_model_path="C:/Users/dhbaek/Desktop/project/LLM/model/hyperClova0.5B/onnx_fp32_hyperclova/model.onnx"
-local_tokenizer_path="C:/Users/dhbaek/Desktop/project/LLM/model/hyperClova0.5B/onnx_fp32_hyperclova"
+#local_model_path="C:/Users/dhbaek/Desktop/project/LLM/model/hyperClova0.5B/onnx_fp32_hyperclova/model.onnx"
+local_model_path="/app/model/hyperClova0.5B/onnx_fp32_hyperclova/model.onnx"
+#local_tokenizer_path="C:/Users/dhbaek/Desktop/project/LLM/model/hyperClova0.5B/onnx_fp32_hyperclova"
+local_tokenizer_path="/app/model/hyperClova0.5B/onnx_fp32_hyperclova"
 
 try:
     session_ort = ort.InferenceSession(
         local_model_path,
-        providers=["DmlExecutionProvider"]
+        providers=["CUDAExecutionProvider", "CPUExecutionProvider"]
+        #providers=["DmlExecutionProvider"]
     )
     print("DirectML GPU 사용 중:", session_ort.get_providers())
 except Exception as e:
@@ -29,8 +32,10 @@ print("ONNX 모델 로딩 성공:", session_ort)
 
 # ① MCP 서버 연결 설정
 server_params = StdioServerParameters(
-    command="C:/Users/dhbaek/Desktop/project/venv/MCP/Scripts/python.exe",
-    args=["C:/Users/dhbaek/Desktop/project/MCP/test.py"]  # FastMCP 서버 파일
+    #command="C:/Users/dhbaek/Desktop/project/venv/MCP/Scripts/python.exe",
+    #args=["C:/Users/dhbaek/Desktop/project/MCP/test.py"]  # FastMCP 서버 파일
+    command="python",
+    args=["/app/test.py"]  # FastMCP 서버 파일
 )
 
 tokenizer = AutoTokenizer.from_pretrained(local_tokenizer_path)

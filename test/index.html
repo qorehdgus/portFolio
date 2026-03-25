@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>WebSocket Chat Client</title>
+</head>
+<body>
+  <h2>WebSocket Chat Client</h2>
+  <div>
+    <input id="messageInput" type="text" placeholder="메시지를 입력하세요" />
+    <button onclick="sendMessage()">보내기</button>
+  </div>
+  <div id="chatLog" style="margin-top:20px; border:1px solid #ccc; padding:10px; width:300px; height:200px; overflow-y:auto;">
+    <strong>채팅 로그:</strong><br>
+  </div>
+
+  <script>
+    // 서버에 연결
+    const socket = new WebSocket("ws://localhost:8765");
+
+    socket.onopen = () => {
+      console.log("서버와 연결되었습니다.");
+      document.getElementById("chatLog").innerHTML += "서버와 연결되었습니다.<br>";
+    };
+
+    socket.onmessage = (event) => {
+        console.log("서버로부터 메시지:", event.data);
+        const chatLog = document.getElementById("chatLog");
+        chatLog.innerHTML += event.data; // 줄바꿈 없이 이어붙이기
+    };
+
+
+    socket.onclose = () => {
+      console.log("서버 연결이 종료되었습니다.");
+      document.getElementById("chatLog").innerHTML += "서버 연결 종료<br>";
+    };
+
+    socket.onerror = (error) => {
+      console.error("WebSocket 에러:", error);
+    };
+
+    function sendMessage() {
+      const input = document.getElementById("messageInput");
+      const message = input.value;
+      if (message) {
+        socket.send(message);
+        document.getElementById("chatLog").innerHTML += "나: " + message + "<br>";
+        input.value = "";
+      }
+    }
+  </script>
+</body>
+</html>
