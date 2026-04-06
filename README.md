@@ -13,4 +13,4 @@ https://huggingface.co/HuggingFaceTB/SmolLM3-3B
 
 * llm_int8_enable_fp32_cpu_offload=True 옵션 제거
 CPU 오프로딩을 제거하고 GPU로만 구동하니 답변의 품질 향상을 확인.
-: 데이터 이동이 없어 토큰 생성이 끊기지 않아서로 추측.
+데이터 이동이 없어 토큰 생성이 끊기지 않아서로 추측.
