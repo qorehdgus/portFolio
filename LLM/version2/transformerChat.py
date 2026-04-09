@@ -57,44 +57,6 @@ try:
 except Exception as e:
     raise RuntimeError(f"모델 로딩 실패: {e}")
 
-while True:
-    _, task_json = r.brpop("chat_queue")
-    task = json.loads(task_json)
-    session_id = task["session_id"]
-    prompt = task["prompt"]
-
-    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-    streamer = TextIteratorStreamer(tokenizer, skip_prompt=True)
-    thread = threading.Thread(target=model.generate, kwargs={"**inputs", "streamer": streamer, "max_new_tokens":256})
-    thread.start()
-
-    response_text = ""
-    for token in streamer:
-        response_text += token
-        r.publish(f"stream:{session_id}", token)
-    r.publish(f"stream:{session_id}", "[DONE]")
-    r.set(f"chat_result:{session_id}", response_text, ex=3600)
-
-@app.post("/chat")
-def chat_request(session_id: str, prompt: str):
-    task = {"session_id": session_id, "prompt": prompt}
-    r.lpush("chat_queue", json.dumps(task))
-    return {"status": "queued", "session_id": session_id}
-
-
-@app.get("/stream")
-def stream(session_id: str):
-    def event_generator():
-        pubsub = r.pubsub()
-        pubsub.subscribe(f"stream:{session_id}")
-        for message in pubsub.listen():
-            if message["type"] == "message":
-                yield f"data: {message['data'].decode()}\n\n"
-                if message["data"].decode() == "[DONE]":
-                    break
-    return StreamingResponse(event_generator(), media_type="text/event-stream")
-
-
 @app.get("/chat")
 def chat_endpoint(session_id: str, prompt: str):
     try:

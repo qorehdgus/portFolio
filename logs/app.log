@@ -1,0 +1,80 @@
+2026-04-09T22:13:14.868+09:00  INFO 9784 --- [spring-boot] [restartedMain] com.example.demo.Application             : Starting Application using Java 17.0.12 with PID 9784 (C:\Users\user\Desktop\github\portFolio\springboot\spring-boot\build\classes\java\main started by user in C:\Users\user\Desktop\github\portFolio)
+2026-04-09T22:13:14.876+09:00 DEBUG 9784 --- [spring-boot] [restartedMain] com.example.demo.Application             : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-09T22:13:14.878+09:00  INFO 9784 --- [spring-boot] [restartedMain] com.example.demo.Application             : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T22:13:14.978+09:00  INFO 9784 --- [spring-boot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-09T22:13:14.979+09:00  INFO 9784 --- [spring-boot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-09T22:13:17.195+09:00  INFO 9784 --- [spring-boot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-09T22:13:17.265+09:00  INFO 9784 --- [spring-boot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 JPA repository interfaces.
+2026-04-09T22:13:18.870+09:00  INFO 9784 --- [spring-boot] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-04-09T22:13:18.919+09:00  INFO 9784 --- [spring-boot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T22:13:18.921+09:00  INFO 9784 --- [spring-boot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T22:13:19.067+09:00  INFO 9784 --- [spring-boot] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4087 ms
+2026-04-09T22:13:19.510+09:00  INFO 9784 --- [spring-boot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-09T22:13:20.040+09:00  INFO 9784 --- [spring-boot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:7972089a-1d2a-45a5-bca0-9ee97fd24d16 user=SA
+2026-04-09T22:13:20.046+09:00  INFO 9784 --- [spring-boot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-09T22:13:20.143+09:00  INFO 9784 --- [spring-boot] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-09T22:13:20.303+09:00  INFO 9784 --- [spring-boot] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-09T22:13:21.391+09:00  INFO 9784 --- [spring-boot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-09T22:13:21.596+09:00  INFO 9784 --- [spring-boot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:7972089a-1d2a-45a5-bca0-9ee97fd24d16]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 7972089A-1D2A-45A5-BCA0-9EE97FD24D16/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-09T22:13:22.190+09:00  INFO 9784 --- [spring-boot] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-09T22:13:22.202+09:00  INFO 9784 --- [spring-boot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-09T22:13:22.433+09:00  WARN 9784 --- [spring-boot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-09T22:13:22.508+09:00  INFO 9784 --- [spring-boot] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-04-09T22:13:23.126+09:00  INFO 9784 --- [spring-boot] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:7972089a-1d2a-45a5-bca0-9ee97fd24d16'
+2026-04-09T22:13:23.222+09:00  INFO 9784 --- [spring-boot] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-04-09T22:13:23.234+09:00  INFO 9784 --- [spring-boot] [restartedMain] com.example.demo.Application             : Started Application in 9.235 seconds (process running for 9.964)
+2026-04-09T22:22:51.184+09:00  INFO 9784 --- [spring-boot] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-09T22:22:51.184+09:00  INFO 9784 --- [spring-boot] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-09T22:22:51.184+09:00  INFO 9784 --- [spring-boot] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-09T22:22:51.603+09:00  INFO 9784 --- [spring-boot] [http-nio-9090-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 140 ms
+2026-04-09T22:38:28.140+09:00  INFO 6496 --- [spring-boot] [restartedMain] com.example.demo.Application             : Starting Application using Java 17.0.12 with PID 6496 (C:\Users\user\Desktop\github\portFolio\springboot\spring-boot\build\classes\java\main started by user in C:\Users\user\Desktop\github\portFolio)
+2026-04-09T22:38:28.144+09:00 DEBUG 6496 --- [spring-boot] [restartedMain] com.example.demo.Application             : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-09T22:38:28.144+09:00  INFO 6496 --- [spring-boot] [restartedMain] com.example.demo.Application             : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T22:38:28.311+09:00  INFO 6496 --- [spring-boot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-09T22:38:28.316+09:00  INFO 6496 --- [spring-boot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-09T22:38:29.850+09:00  INFO 6496 --- [spring-boot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-09T22:38:29.902+09:00  INFO 6496 --- [spring-boot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 JPA repository interfaces.
+2026-04-09T22:38:31.137+09:00  INFO 6496 --- [spring-boot] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-04-09T22:38:31.188+09:00  INFO 6496 --- [spring-boot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T22:38:31.188+09:00  INFO 6496 --- [spring-boot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T22:38:31.306+09:00  INFO 6496 --- [spring-boot] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2990 ms
+2026-04-09T22:38:31.650+09:00  INFO 6496 --- [spring-boot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-09T22:38:32.004+09:00  INFO 6496 --- [spring-boot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:d9d01ba4-36be-4a30-b086-a45755958cba user=SA
+2026-04-09T22:38:32.019+09:00  INFO 6496 --- [spring-boot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-09T22:38:32.107+09:00  INFO 6496 --- [spring-boot] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-09T22:38:32.223+09:00  INFO 6496 --- [spring-boot] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-09T22:38:33.202+09:00  INFO 6496 --- [spring-boot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-09T22:38:33.422+09:00  INFO 6496 --- [spring-boot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:d9d01ba4-36be-4a30-b086-a45755958cba]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: D9D01BA4-36BE-4A30-B086-A45755958CBA/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-09T22:38:33.976+09:00  INFO 6496 --- [spring-boot] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-09T22:38:33.987+09:00  INFO 6496 --- [spring-boot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-09T22:38:34.152+09:00  WARN 6496 --- [spring-boot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-09T22:38:34.252+09:00  INFO 6496 --- [spring-boot] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-04-09T22:38:34.820+09:00  INFO 6496 --- [spring-boot] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:d9d01ba4-36be-4a30-b086-a45755958cba'
+2026-04-09T22:38:34.917+09:00  INFO 6496 --- [spring-boot] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-04-09T22:38:34.918+09:00  INFO 6496 --- [spring-boot] [restartedMain] com.example.demo.Application             : Started Application in 7.699 seconds (process running for 8.584)
+2026-04-09T22:38:40.270+09:00  INFO 6496 --- [spring-boot] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-09T22:38:40.271+09:00  INFO 6496 --- [spring-boot] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-09T22:38:40.272+09:00  INFO 6496 --- [spring-boot] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-09T22:40:14.244+09:00  INFO 6496 --- [spring-boot] [http-nio-9090-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 217 ms

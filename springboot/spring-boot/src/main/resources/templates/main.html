@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <title>LLM Client</title>
 </head>
 <body>
-    <h1 th:text="'안녕하세요, ' + ${name}"></h1>
+  <button id="sendBtn">Send Chat</button>
+  <pre id="output"></pre>
+
+  <script>
+    async function sendChat(sessionId, prompt) {
+      const res = await fetch("http://localhost:8000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ session_id: sessionId, prompt: prompt })
+      });
+      const data = await res.json();
+      console.log("Chat queued:", data);
+    }
+
+    function streamResponse(sessionId) {
+      const output = document.getElementById("output");
+      const url = `http://localhost:8000/stream?session_id=${sessionId}`;
+      const eventSource = new EventSource(url);
+
+      eventSource.onmessage = (event) => {
+        const data = event.data;
+        output.textContent += data;
+        if (data === "[DONE]") {
+          eventSource.close();
+        }
+      };
+    }
+
+    document.getElementById("sendBtn").onclick = async () => {
+      const sessionId = "browserTest";
+      await sendChat(sessionId, "안녕, 오늘 하루 어땠어?");
+      streamResponse(sessionId);
+    };
+  </script>
 </body>
 </html>

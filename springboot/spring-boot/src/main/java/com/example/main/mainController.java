@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class mainController {
-    @GetMapping("/hello")
+    @GetMapping("/")
     public String hello(Model model) {
-        model.addAttribute("name", "Spring Boot + Thymeleaf");
         return "main"; // templates/hello.html 렌더링
     }
 
