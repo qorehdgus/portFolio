@@ -1,0 +1,8 @@
+2026-04-10 21:29:20,007 [Process-1] ERROR: 모델 서버 호출 실패 (시도 1/3): 422 Client Error: Unprocessable Entity for url: http://localhost:8001/answer
+2026-04-10 21:29:24,086 [Process-1] ERROR: 모델 서버 호출 실패 (시도 2/3): 422 Client Error: Unprocessable Entity for url: http://localhost:8001/answer
+2026-04-10 21:29:30,148 [Process-1] ERROR: 모델 서버 호출 실패 (시도 3/3): 422 Client Error: Unprocessable Entity for url: http://localhost:8001/answer
+2026-04-10 21:29:30,148 [Process-1] ERROR: 작업 처리 실패, session_id=browserTest
+2026-04-10 21:50:11,893 [Process-1] ERROR: 모델 서버 호출 실패 (시도 1/3): 500 Server Error: Internal Server Error for url: http://localhost:8001/answer
+2026-04-10 21:50:15,948 [Process-1] ERROR: 모델 서버 호출 실패 (시도 2/3): 500 Server Error: Internal Server Error for url: http://localhost:8001/answer
+2026-04-10 21:50:22,030 [Process-1] ERROR: 모델 서버 호출 실패 (시도 3/3): 500 Server Error: Internal Server Error for url: http://localhost:8001/answer
+2026-04-10 21:50:22,030 [Process-1] ERROR: 작업 처리 실패, session_id=browserTest

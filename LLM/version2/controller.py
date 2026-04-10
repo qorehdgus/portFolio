@@ -50,3 +50,5 @@ def stream(session_id: str):
                 if message["data"].decode() == "[DONE]":
                     break
     return StreamingResponse(event_generator(), media_type="text/event-stream")
+
+

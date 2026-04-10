@@ -5,3 +5,15 @@
 2026-04-09 23:17:07,306 [MainProcess] INFO: 0번째 worker 동작
 2026-04-09 23:17:07,327 [MainProcess] INFO: api 서버 동작
 2026-04-09 23:17:07,335 [MainProcess] INFO: modal api 서버 동작
+2026-04-10 11:23:43,793 [MainProcess] INFO: 0번째 worker 동작
+2026-04-10 11:23:43,801 [MainProcess] INFO: controller api 서버 동작
+2026-04-10 11:23:43,804 [MainProcess] INFO: model api 서버 동작
+2026-04-10 21:28:35,240 [MainProcess] INFO: 0번째 worker 동작
+2026-04-10 21:28:35,247 [MainProcess] INFO: controller api 서버 동작
+2026-04-10 21:28:35,250 [MainProcess] INFO: model api 서버 동작
+2026-04-10 21:33:25,758 [MainProcess] INFO: 0번째 worker 동작
+2026-04-10 21:33:25,765 [MainProcess] INFO: controller api 서버 동작
+2026-04-10 21:33:25,768 [MainProcess] INFO: model api 서버 동작
+2026-04-10 21:52:18,938 [MainProcess] INFO: 0번째 worker 동작
+2026-04-10 21:52:18,946 [MainProcess] INFO: controller api 서버 동작
+2026-04-10 21:52:18,950 [MainProcess] INFO: model api 서버 동작

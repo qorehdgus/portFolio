@@ -1,9 +1,13 @@
-import redis, json, requests
+import redis, json, requests, time
 
 MODEL_SERVER_URL = "http://localhost:8001/answer"  # modelServer.py가 띄운 API 주소
 import loggerModule
 
 logger = loggerModule.getLogger('worker');
+
+RETRY_MAX = 3
+RETRY_DELAY_SEC = 2
+REQUEST_TIMEOUT = 10
 
 try:
     #r = redis.Redis(host="localhost", port=6379, db=0)
@@ -20,15 +24,19 @@ def run():
         session_id = task["session_id"]
         prompt = task["prompt"]
 
-        try:
-            # 모델 서버에 요청 보내기
-            response = requests.post(
-                MODEL_SERVER_URL,
-                params={"session_id": session_id, "prompt": prompt}
-            )
-            if response.status_code != 200:
-                print(f"모델 서버 호출 실패: {response.text}")
-        except Exception as e:
-            logger.error(f"워커 오류: {e}")
-
-            print(f"워커 오류: {e}")
+        for attempt in range(1, RETRY_MAX + 1):
+            try:
+                response = requests.post(
+                    MODEL_SERVER_URL,
+                    json={"session_id": session_id, "prompt": prompt},
+                    timeout=REQUEST_TIMEOUT
+                )
+                response.raise_for_status()
+                break
+            except requests.RequestException as e:
+                logger.error(f"모델 서버 호출 실패 (시도 {attempt}/{RETRY_MAX}): {e}")
+                if attempt >= RETRY_MAX:
+                    logger.error(f"작업 처리 실패, session_id={session_id}")
+                else:
+                    time.sleep(RETRY_DELAY_SEC * attempt)
+                    continue

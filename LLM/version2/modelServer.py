@@ -4,6 +4,11 @@ from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer, BitsAndBytesConfig
+from pydantic import BaseModel
+
+from mcp import ClientSession, StdioServerParameters
+from mcp.client.stdio import stdio_client
+
 
 def create_app():
     app = FastAPI()
@@ -52,8 +57,34 @@ def create_app():
         messages = r.lrange(f"chat:{session_id}", 0, -1)
         return [json.loads(m) for m in messages]
 
+    class ChatRequest(BaseModel):
+        session_id: str
+        prompt: str
+
+    async def get_tools_from_mcp():
+        """MCP 서버에서 툴 목록 가져오기"""
+        server_params = StdioServerParameters(
+            command="C:/Users/dhbaek/Desktop/project/venv/MCP/Scripts/python.exe",
+            args=["C:/Users/dhbaek/Desktop/project/MCP/test.py"]  # FastMCP 서버 파일
+        )
+        async with stdio_client(server_params) as (read, write):
+            async with ClientSession(read, write) as session:
+                await session.initialize()
+                tools_result = await session.list_tools()
+                tools = [
+                    {
+                        "name": tool.name,
+                        "description": tool.description,
+                        "input_schema": tool.inputSchema
+                    }
+                    for tool in tools_result.tools
+                ]
+                return tools
+
     @app.post("/answer")
-    def chat_request(session_id: str, prompt: str):
+    def chat_request(chat_request: ChatRequest):
+        session_id = chat_request.session_id
+        prompt = chat_request.prompt
         chat_history = load_chat(session_id)
         if not chat_history:
             chat_history = [
@@ -70,9 +101,11 @@ def create_app():
             add_generation_prompt=True,
             return_tensors="pt"
         )
+
         model_inputs = tokenizer([inputs], return_tensors="pt").to(model.device)
 
         streamer = TextIteratorStreamer(tokenizer, skip_prompt=True)
+
         terminators = [
             tokenizer.convert_tokens_to_ids("<|end_of_text|>"),
             tokenizer.convert_tokens_to_ids("<|eot_id|>")
@@ -105,5 +138,4 @@ def create_app():
 
 # 독립 실행 시
 if __name__ == "__main__":
-    import uvicorn
     uvicorn.run(create_app(), host="0.0.0.0", port=8001)

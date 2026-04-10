@@ -1,12 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
   <meta charset="utf-8">
-  <title>LLM Client</title>
+  <title>LLM Chat Client</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2em;
+    }
+    #chatWindow {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      background: #fff;
+    }
+    .message {
+      margin: 10px 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      max-width: 70%;
+      line-height: 1.4;
+    }
+    .user {
+      background: #d1ecf1;
+      align-self: flex-end;
+      text-align: right;
+    }
+    .bot {
+      background: #f8d7da;
+      align-self: flex-start;
+      text-align: left;
+    }
+    #inputArea {
+      display: flex;
+      padding: 10px;
+      background: #eee;
+    }
+    #promptInput {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    #sendBtn {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    #sendBtn:hover {
+      background: #357ab8;
+    }
+  </style>
 </head>
 <body>
-  <button id="sendBtn">Send Chat</button>
-  <pre id="output"></pre>
+  <header>LLM Chat Client</header>
+  <div id="chatWindow"></div>
+  <div id="inputArea">
+    <input id="promptInput" type="text" placeholder="메시지를 입력하세요..." />
+    <button id="sendBtn">보내기</button>
+  </div>
 
   <script>
     async function sendChat(sessionId, prompt) {
@@ -20,23 +90,44 @@
     }
 
     function streamResponse(sessionId) {
-      const output = document.getElementById("output");
+      const chatWindow = document.getElementById("chatWindow");
       const url = `http://localhost:8000/stream?session_id=${sessionId}`;
       const eventSource = new EventSource(url);
 
+      let botMsg = document.createElement("div");
+      botMsg.className = "message bot";
+      chatWindow.appendChild(botMsg);
+
       eventSource.onmessage = (event) => {
         const data = event.data;
-        output.textContent += data;
         if (data === "[DONE]") {
           eventSource.close();
+        } else {
+          botMsg.textContent += data;
+          chatWindow.scrollTop = chatWindow.scrollHeight;
         }
       };
     }
 
     document.getElementById("sendBtn").onclick = async () => {
       const sessionId = "browserTest";
-      await sendChat(sessionId, "안녕, 오늘 하루 어땠어?");
+      const promptInput = document.getElementById("promptInput");
+      const prompt = promptInput.value.trim();
+      if (!prompt) return;
+
+      // 사용자 메시지 표시
+      const chatWindow = document.getElementById("chatWindow");
+      const userMsg = document.createElement("div");
+      userMsg.className = "message user";
+      userMsg.textContent = prompt;
+      chatWindow.appendChild(userMsg);
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+
+      // 서버로 전송
+      await sendChat(sessionId, prompt);
       streamResponse(sessionId);
+
+      promptInput.value = "";
     };
   </script>
 </body>
