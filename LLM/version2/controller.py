@@ -2,8 +2,13 @@ from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 import redis, json
+import uvicorn
 
 app = FastAPI()
+
+import os
+REDIS_HOST = os.getenv("REDIS_HOST")
+REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
 
 # 허용할 origin 목록 (개발 중이라면 * 로 전체 허용 가능)
 origins = [
@@ -22,7 +27,7 @@ app.add_middleware(
 
 try:
     #r = redis.Redis(host="localhost", port=6379, db=0)
-    pool = redis.ConnectionPool(host="localhost", port=6379, db=0, max_connections=20)
+    pool = redis.ConnectionPool(host=REDIS_HOST, port=REDIS_PORT, db=0, max_connections=20)
     r = redis.Redis(connection_pool=pool)
 except redis.ConnectionError:
     raise RuntimeError("Redis 서버에 연결할 수 없습니다.")
@@ -51,4 +56,6 @@ def stream(session_id: str):
                     break
     return StreamingResponse(event_generator(), media_type="text/event-stream")
 
-
+# 독립 실행 시
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)

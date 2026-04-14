@@ -17,3 +17,9 @@
 2026-04-10 21:52:18,938 [MainProcess] INFO: 0번째 worker 동작
 2026-04-10 21:52:18,946 [MainProcess] INFO: controller api 서버 동작
 2026-04-10 21:52:18,950 [MainProcess] INFO: model api 서버 동작
+2026-04-11 17:08:40,613 [MainProcess] INFO: 0번째 worker 동작
+2026-04-11 17:08:40,613 [MainProcess] INFO: controller api 서버 동작
+2026-04-11 17:08:40,613 [MainProcess] INFO: model api 서버 동작
+2026-04-11 17:11:56,009 [MainProcess] INFO: 0번째 worker 동작
+2026-04-11 17:11:56,025 [MainProcess] INFO: controller api 서버 동작
+2026-04-11 17:11:56,025 [MainProcess] INFO: model api 서버 동작

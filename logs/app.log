@@ -1,79 +1,79 @@
-2026-04-10T11:24:56.669+09:00  INFO 12616 --- [spring-boot] [restartedMain] com.example.demo.Application             : Starting Application using Java 17.0.12 with PID 12616 (C:\Users\user\Desktop\github\portFolio\springboot\spring-boot\build\classes\java\main started by user in C:\Users\user\Desktop\github\portFolio)
-2026-04-10T11:24:56.692+09:00 DEBUG 12616 --- [spring-boot] [restartedMain] com.example.demo.Application             : Running with Spring Boot v4.0.5, Spring v7.0.6
-2026-04-10T11:24:56.699+09:00  INFO 12616 --- [spring-boot] [restartedMain] com.example.demo.Application             : No active profile set, falling back to 1 default profile: "default"
-2026-04-10T11:24:56.798+09:00  INFO 12616 --- [spring-boot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-10T11:24:56.798+09:00  INFO 12616 --- [spring-boot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-10T11:24:58.509+09:00  INFO 12616 --- [spring-boot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-10T11:24:58.565+09:00  INFO 12616 --- [spring-boot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 JPA repository interfaces.
-2026-04-10T11:24:59.499+09:00  INFO 12616 --- [spring-boot] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
-2026-04-10T11:24:59.538+09:00  INFO 12616 --- [spring-boot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-10T11:24:59.540+09:00  INFO 12616 --- [spring-boot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-04-10T11:24:59.632+09:00  INFO 12616 --- [spring-boot] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2818 ms
-2026-04-10T11:25:00.026+09:00  INFO 12616 --- [spring-boot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-10T11:25:00.386+09:00  INFO 12616 --- [spring-boot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:c2b3bec4-9010-4952-8949-1e08e41fbc77 user=SA
-2026-04-10T11:25:00.399+09:00  INFO 12616 --- [spring-boot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-10T11:25:00.456+09:00  INFO 12616 --- [spring-boot] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-04-10T11:25:00.548+09:00  INFO 12616 --- [spring-boot] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-04-10T11:25:01.265+09:00  INFO 12616 --- [spring-boot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-10T11:25:01.359+09:00  INFO 12616 --- [spring-boot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:h2:mem:c2b3bec4-9010-4952-8949-1e08e41fbc77]
+2026-04-11T17:08:20.649+09:00  INFO 16348 --- [spring-boot] [restartedMain] com.example.demo.Application             : Starting Application using Java 17.0.12 with PID 16348 (C:\Users\user\Desktop\github\portFolio\springboot\spring-boot\build\classes\java\main started by user in C:\Users\user\Desktop\github\portFolio)
+2026-04-11T17:08:20.668+09:00 DEBUG 16348 --- [spring-boot] [restartedMain] com.example.demo.Application             : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-11T17:08:20.676+09:00  INFO 16348 --- [spring-boot] [restartedMain] com.example.demo.Application             : No active profile set, falling back to 1 default profile: "default"
+2026-04-11T17:08:20.905+09:00  INFO 16348 --- [spring-boot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-11T17:08:20.912+09:00  INFO 16348 --- [spring-boot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-11T17:08:23.356+09:00  INFO 16348 --- [spring-boot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-11T17:08:23.408+09:00  INFO 16348 --- [spring-boot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JPA repository interfaces.
+2026-04-11T17:08:24.615+09:00  INFO 16348 --- [spring-boot] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-04-11T17:08:24.664+09:00  INFO 16348 --- [spring-boot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-11T17:08:24.666+09:00  INFO 16348 --- [spring-boot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-11T17:08:24.829+09:00  INFO 16348 --- [spring-boot] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3917 ms
+2026-04-11T17:08:25.246+09:00  INFO 16348 --- [spring-boot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-11T17:08:25.819+09:00  INFO 16348 --- [spring-boot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:be13225c-fef6-4934-836a-c000240167a3 user=SA
+2026-04-11T17:08:25.819+09:00  INFO 16348 --- [spring-boot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-11T17:08:26.002+09:00  INFO 16348 --- [spring-boot] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-11T17:08:26.129+09:00  INFO 16348 --- [spring-boot] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-11T17:08:27.164+09:00  INFO 16348 --- [spring-boot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-11T17:08:27.278+09:00  INFO 16348 --- [spring-boot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:be13225c-fef6-4934-836a-c000240167a3]
 	Database driver: H2 JDBC Driver
 	Database dialect: H2Dialect
 	Database version: 2.4.240
-	Default catalog/schema: C2B3BEC4-9010-4952-8949-1E08E41FBC77/PUBLIC
+	Default catalog/schema: BE13225C-FEF6-4934-836A-C000240167A3/PUBLIC
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: 100
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-04-10T11:25:01.651+09:00  INFO 12616 --- [spring-boot] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-10T11:25:01.667+09:00  INFO 12616 --- [spring-boot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-10T11:25:01.796+09:00  WARN 12616 --- [spring-boot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-04-10T11:25:01.865+09:00  INFO 12616 --- [spring-boot] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2026-04-10T11:25:02.327+09:00  INFO 12616 --- [spring-boot] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:c2b3bec4-9010-4952-8949-1e08e41fbc77'
-2026-04-10T11:25:02.422+09:00  INFO 12616 --- [spring-boot] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
-2026-04-10T11:25:02.433+09:00  INFO 12616 --- [spring-boot] [restartedMain] com.example.demo.Application             : Started Application in 6.866 seconds (process running for 7.965)
-2026-04-10T11:25:37.132+09:00  INFO 12616 --- [spring-boot] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-10T11:25:37.132+09:00  INFO 12616 --- [spring-boot] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-10T11:25:37.132+09:00  INFO 12616 --- [spring-boot] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-04-10T11:25:37.483+09:00  INFO 12616 --- [spring-boot] [http-nio-9090-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 140 ms
-2026-04-10T11:41:14.346+09:00  INFO 1452 --- [spring-boot] [restartedMain] com.example.demo.Application             : Starting Application using Java 17.0.12 with PID 1452 (C:\Users\user\Desktop\github\portFolio\springboot\spring-boot\build\classes\java\main started by user in C:\Users\user\Desktop\github\portFolio)
-2026-04-10T11:41:14.353+09:00 DEBUG 1452 --- [spring-boot] [restartedMain] com.example.demo.Application             : Running with Spring Boot v4.0.5, Spring v7.0.6
-2026-04-10T11:41:14.355+09:00  INFO 1452 --- [spring-boot] [restartedMain] com.example.demo.Application             : No active profile set, falling back to 1 default profile: "default"
-2026-04-10T11:41:14.454+09:00  INFO 1452 --- [spring-boot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-10T11:41:14.455+09:00  INFO 1452 --- [spring-boot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-10T11:41:16.045+09:00  INFO 1452 --- [spring-boot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-10T11:41:16.108+09:00  INFO 1452 --- [spring-boot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 0 JPA repository interfaces.
-2026-04-10T11:41:17.380+09:00  INFO 1452 --- [spring-boot] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
-2026-04-10T11:41:17.413+09:00  INFO 1452 --- [spring-boot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-10T11:41:17.415+09:00  INFO 1452 --- [spring-boot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-04-10T11:41:17.516+09:00  INFO 1452 --- [spring-boot] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3060 ms
-2026-04-10T11:41:17.843+09:00  INFO 1452 --- [spring-boot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-10T11:41:18.226+09:00  INFO 1452 --- [spring-boot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:2dec9a9d-08b7-497e-a653-69df4691c82e user=SA
-2026-04-10T11:41:18.231+09:00  INFO 1452 --- [spring-boot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-10T11:41:18.294+09:00  INFO 1452 --- [spring-boot] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-04-10T11:41:18.387+09:00  INFO 1452 --- [spring-boot] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-04-10T11:41:19.378+09:00  INFO 1452 --- [spring-boot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-10T11:41:19.588+09:00  INFO 1452 --- [spring-boot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:h2:mem:2dec9a9d-08b7-497e-a653-69df4691c82e]
+2026-04-11T17:08:27.670+09:00  INFO 16348 --- [spring-boot] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-11T17:08:27.685+09:00  INFO 16348 --- [spring-boot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-11T17:08:27.912+09:00  WARN 16348 --- [spring-boot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-11T17:08:28.026+09:00  INFO 16348 --- [spring-boot] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-04-11T17:08:28.847+09:00  INFO 16348 --- [spring-boot] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:be13225c-fef6-4934-836a-c000240167a3'
+2026-04-11T17:08:28.948+09:00  INFO 16348 --- [spring-boot] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-04-11T17:08:28.958+09:00  INFO 16348 --- [spring-boot] [restartedMain] com.example.demo.Application             : Started Application in 10.006 seconds (process running for 11.257)
+2026-04-11T17:09:36.015+09:00  INFO 16348 --- [spring-boot] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-11T17:09:36.017+09:00  INFO 16348 --- [spring-boot] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-11T17:09:36.028+09:00  INFO 16348 --- [spring-boot] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2026-04-11T17:09:36.585+09:00  INFO 16348 --- [spring-boot] [http-nio-9090-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 196 ms
+2026-04-11T18:40:27.826+09:00  INFO 4488 --- [spring-boot] [restartedMain] com.example.demo.Application             : Starting Application using Java 17.0.12 with PID 4488 (C:\Users\user\Desktop\github\portFolio\springboot\spring-boot\build\classes\java\main started by user in C:\Users\user\Desktop\github\portFolio)
+2026-04-11T18:40:27.838+09:00 DEBUG 4488 --- [spring-boot] [restartedMain] com.example.demo.Application             : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-11T18:40:27.841+09:00  INFO 4488 --- [spring-boot] [restartedMain] com.example.demo.Application             : No active profile set, falling back to 1 default profile: "default"
+2026-04-11T18:40:27.993+09:00  INFO 4488 --- [spring-boot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-11T18:40:28.001+09:00  INFO 4488 --- [spring-boot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-11T18:40:29.697+09:00  INFO 4488 --- [spring-boot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-11T18:40:29.730+09:00  INFO 4488 --- [spring-boot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2026-04-11T18:40:31.094+09:00  INFO 4488 --- [spring-boot] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-04-11T18:40:31.134+09:00  INFO 4488 --- [spring-boot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-11T18:40:31.135+09:00  INFO 4488 --- [spring-boot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-11T18:40:31.241+09:00  INFO 4488 --- [spring-boot] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3237 ms
+2026-04-11T18:40:31.574+09:00  INFO 4488 --- [spring-boot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-11T18:40:31.950+09:00  INFO 4488 --- [spring-boot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:6a317cbf-97a9-4fbd-b102-93ac742ddd82 user=SA
+2026-04-11T18:40:31.954+09:00  INFO 4488 --- [spring-boot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-11T18:40:32.056+09:00  INFO 4488 --- [spring-boot] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-11T18:40:32.179+09:00  INFO 4488 --- [spring-boot] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-11T18:40:33.093+09:00  INFO 4488 --- [spring-boot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-11T18:40:33.347+09:00  INFO 4488 --- [spring-boot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:6a317cbf-97a9-4fbd-b102-93ac742ddd82]
 	Database driver: H2 JDBC Driver
 	Database dialect: H2Dialect
 	Database version: 2.4.240
-	Default catalog/schema: 2DEC9A9D-08B7-497E-A653-69DF4691C82E/PUBLIC
+	Default catalog/schema: 6A317CBF-97A9-4FBD-B102-93AC742DDD82/PUBLIC
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: 100
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-04-10T11:41:20.248+09:00  INFO 1452 --- [spring-boot] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-10T11:41:20.259+09:00  INFO 1452 --- [spring-boot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-10T11:41:20.439+09:00  WARN 1452 --- [spring-boot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-04-10T11:41:20.518+09:00  INFO 1452 --- [spring-boot] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2026-04-10T11:41:21.215+09:00  INFO 1452 --- [spring-boot] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:2dec9a9d-08b7-497e-a653-69df4691c82e'
-2026-04-10T11:41:21.307+09:00  INFO 1452 --- [spring-boot] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
-2026-04-10T11:41:21.319+09:00  INFO 1452 --- [spring-boot] [restartedMain] com.example.demo.Application             : Started Application in 7.941 seconds (process running for 8.76)
-2026-04-10T11:43:38.699+09:00  INFO 1452 --- [spring-boot] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-10T11:43:38.700+09:00  INFO 1452 --- [spring-boot] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-10T11:43:38.701+09:00  INFO 1452 --- [spring-boot] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-11T18:40:33.868+09:00  INFO 4488 --- [spring-boot] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-11T18:40:33.875+09:00  INFO 4488 --- [spring-boot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-11T18:40:34.059+09:00  WARN 4488 --- [spring-boot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-11T18:40:34.145+09:00  INFO 4488 --- [spring-boot] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-04-11T18:40:34.721+09:00  INFO 4488 --- [spring-boot] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:6a317cbf-97a9-4fbd-b102-93ac742ddd82'
+2026-04-11T18:40:34.818+09:00  INFO 4488 --- [spring-boot] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-04-11T18:40:34.828+09:00  INFO 4488 --- [spring-boot] [restartedMain] com.example.demo.Application             : Started Application in 7.863 seconds (process running for 8.785)
+2026-04-11T18:40:36.410+09:00  INFO 4488 --- [spring-boot] [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-11T18:40:36.410+09:00  INFO 4488 --- [spring-boot] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-11T18:40:36.414+09:00  INFO 4488 --- [spring-boot] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms

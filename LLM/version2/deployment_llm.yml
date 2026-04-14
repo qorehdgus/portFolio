@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: llm-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: llm
+  template:
+    metadata:
+      labels:
+        app: llm
+    spec:
+      containers:
+      - name: controller
+        image: dockerfile_controller:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - configMapRef:
+            name: llm-config
+
+      - name: modelserver
+        image: dockerfile_modelserver:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8001
+        volumeMounts:
+        - name: model-volume
+          mountPath: /app/model
+        envFrom:
+        - configMapRef:
+            name: llm-config
+
+      - name: worker
+        image: dockerfile_workers:latest
+        imagePullPolicy: Never
+        envFrom:
+        - configMapRef:
+            name: llm-config
+        
+      volumes:
+      - name: model-volume
+        hostPath:
+          path: /app/model
+          

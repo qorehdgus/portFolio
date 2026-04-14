@@ -11,6 +11,10 @@ def add(a: int, b: int) -> int:
     """Add two numbers"""
     return a + b
 
+@mcp.tool()
+def introduce_person(a: str) -> str:
+    """Introduce a specific person"""
+    return f"{a} is a good person!"
 
 # Add a dynamic greeing resource
 @mcp.resource("greeting://{name}")

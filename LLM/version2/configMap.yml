@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: llm-config
+data:
+  REDIS_HOST: "redis-service"
+  REDIS_PORT: "6379"
+  MODEL_SERVER_URL: "http://modelserver-service:8001/answer"
+  MODEL_NAME: "/app/model/Llama-3.1-8B-Instruct_Function_Calling_xLAM"

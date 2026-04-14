@@ -1,6 +1,11 @@
 import redis, json, requests, time
 
-MODEL_SERVER_URL = "http://localhost:8001/answer"  # modelServer.py가 띄운 API 주소
+import os
+MODEL_SERVER_URL = os.getenv("MODEL_SERVER_URL","http://localhost:8001/answer")
+REDIS_HOST = os.getenv("REDIS_HOST")
+REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
+
+
 import loggerModule
 
 logger = loggerModule.getLogger('worker');
@@ -11,7 +16,7 @@ REQUEST_TIMEOUT = 10
 
 try:
     #r = redis.Redis(host="localhost", port=6379, db=0)
-    pool = redis.ConnectionPool(host="localhost", port=6379, db=0, max_connections=20)
+    pool = redis.ConnectionPool(host=REDIS_HOST, port=REDIS_PORT, db=0, max_connections=20)
     r = redis.Redis(connection_pool=pool)
 except redis.ConnectionError:
     logger.error('Redis 서버에 연결할 수 없습니다.')
@@ -40,3 +45,7 @@ def run():
                 else:
                     time.sleep(RETRY_DELAY_SEC * attempt)
                     continue
+
+# 독립 실행 시
+if __name__ == "__main__":
+    run()

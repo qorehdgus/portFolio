@@ -1,0 +1,12 @@
+FROM python:3.11-slim
+WORKDIR /app
+
+# 패키지 설치
+RUN pip install --upgrade pip
+RUN pip install fastapi uvicorn[standard] redis pydantic
+
+# 소스 복사
+COPY . .
+
+# 실행 명령
+CMD ["python", "controller.py"]
